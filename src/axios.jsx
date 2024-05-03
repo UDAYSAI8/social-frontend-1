@@ -4,7 +4,7 @@ const axiosInstance = () => {
   const token = localStorage.getItem("token");
 
   return axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://social-backend-1-rpl3.onrender.com/",
     headers: {
       "Content-Type": "application/json",
       Authorization: "Bearer " + token,
