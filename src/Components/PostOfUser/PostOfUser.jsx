@@ -14,8 +14,8 @@ function PostOfUser(props) {
     const [isActive, setActive] = useState(null);
     const [comment, setComment] = useState("");
     useEffect(()=>{
-        axiosInstance().get("http://localhost:3000/users/"+props.props.user).then(res=>{setName([res.data.data.name,res.data.data.username])
-        axiosInstance().get("http://localhost:3000/posts/"+props.props._id+"/likes").then(res=>{
+        axiosInstance().get("/users/"+props.props.user).then(res=>{setName([res.data.data.name,res.data.data.username])
+        axiosInstance().get("/posts/"+props.props._id+"/likes").then(res=>{
             const arr = res.data.data.likes;
             setLike(arr.length);
             if(arr.includes(props.props.cur_user)){
@@ -35,14 +35,14 @@ function PostOfUser(props) {
     function likeButton(){
         // setActive(!isActive);
         if(isActive){
-            axiosInstance().patch("http://localhost:3000/posts/"+props.props._id+"/dislike").then((res)=>{
+            axiosInstance().patch("/posts/"+props.props._id+"/dislike").then((res)=>{
                 console.log("disliked");
             })
             setActive(false);
             setLike(like-1);
         }
         else{
-            axiosInstance().patch("http://localhost:3000/posts/"+props.props._id+"/like").then((res)=>{
+            axiosInstance().patch("/posts/"+props.props._id+"/like").then((res)=>{
                 console.log("liked");
             })
             setActive(true);
@@ -52,7 +52,7 @@ function PostOfUser(props) {
 
     function addComment(){
         if(!comment) return alert("Please Enter Comment");
-        const url = "http://localhost:3000/posts/"+props.props._id+"/comment";
+        const url = "/posts/"+props.props._id+"/comment";
         setArr1([...arr1,comment]);
         setComment("");
         axiosInstance().patch(url,{comment: comment}).then(res=>{
