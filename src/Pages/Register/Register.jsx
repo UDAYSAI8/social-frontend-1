@@ -20,7 +20,7 @@ const Register = () => {
       password,
     };
 
-    axiosInstance().post("http://localhost:3000/register", requestBody).then((res) => {
+    axiosInstance().post("/register", requestBody).then((res) => {
         setName("");
         setUsername("");
         setPassword("");

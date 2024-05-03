@@ -29,7 +29,7 @@ function SearchUser() {
     window.location.reload();
   };
   const searchUser = () => {
-      axiosInstance().get("http://localhost:3000/users/username/"+Search).then(res=>{
+      axiosInstance().get("/users/username/"+Search).then(res=>{
         if(res.data.data.length===0){
           alert("No user found");
         }
