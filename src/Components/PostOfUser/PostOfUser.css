@@ -1,0 +1,30 @@
+.prof-container{
+
+    align-items: center;
+    padding: 5px;
+}
+
+.prof_uname{
+    opacity: 0.5;
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+.prof_name{
+    font-size: 17px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+/*css for comments*/
+
+#comments{
+    border: 1px solid black;
+    font-size: 17px;
+    background-color: rgb(244, 235, 224);
+    padding-left: 10px;
+    margin-bottom: 13px;
+
+}

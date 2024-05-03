@@ -1,0 +1,31 @@
+.App{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+
+.App-child{
+  height: 500px;
+}
+
+#mid{
+
+  width:55%;
+  height: 100%;
+}
+
+#left{
+  top: 20px;
+  position: sticky;
+  width: 30%;
+}
+.Post{
+  padding-left: 20px;
+}
+
+.bg-img{
+  background-image: url("https://wallpaperset.com/w/full/e/4/2/16449.jpg");
+  background-size: cover;
+  width: 100%;
+  background-repeat:repeat-y;
+}
